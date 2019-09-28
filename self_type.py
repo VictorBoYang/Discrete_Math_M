@@ -3,9 +3,17 @@ from function_storage import *
 
 scale = 5  #can change scale
 A = [[1,0,0,0,0],[0,0,1,0,0],[0,0,0,0,0],[1,1,0,0,0],[0,0,0,0,0]]
-B = [[1,0,0,1,0],[0,0,0,1,0],[0,1,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]#can change number for A/B
+B = [[1,0,0,1,0],[0,0,0,1,0],[0,1,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+#can change number for A/B
+
 C = [[-1] * 5 for i in range(scale)]
 calculate(A,B,C,scale)
-
+print("Before convert, C is :")
+print_array(C)
 convert_to_one(C,scale)
+print("So your A is :")
+print_array(A)
+print("So your B is :")
+print_array(B)
+print("your C is: ")
 print_array(C)
