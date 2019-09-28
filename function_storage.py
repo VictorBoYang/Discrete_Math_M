@@ -10,7 +10,7 @@ def print_array(array):
 def def_array(array,name,scale):
     for i in range(scale):
         for j in range(scale):
-            value = input("please input value for [" + str(i)+"]" + "[" + str(j) + "]")
+            value = input("please input value for [" + str(i)+"]" + "[" + str(j) + "] (input integer only)")
             value = int(value)
             array[i][j] = value
             print ("now " + name + " is")
