@@ -6,6 +6,7 @@ def print_array(array):
         print (j)
     print ("\n....................")
 
+
 def def_array(array,name,scale):
     for i in range(scale):
         for j in range(scale):
@@ -14,6 +15,7 @@ def def_array(array,name,scale):
             array[i][j] = value
             print ("now " + name + " is")
             print_array(array)
+
 
 def convert_to_one(array,scale):
     for i in range(scale):

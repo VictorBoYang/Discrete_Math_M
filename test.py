@@ -1,7 +1,6 @@
-
 from function_storage import *
 import pytest
-
+#this file has to run by pytest.
 def test_chris_calculate():
     A = [[1,0,0,0,0],[0,0,1,0,0],[0,0,0,0,0],[1,1,0,0,0],[0,0,0,0,0]]
     B = [[1,0,0,1,0],[0,0,0,1,0],[0,1,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
