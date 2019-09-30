@@ -44,3 +44,15 @@ def calculate(array_A,array_B,array_C,scale):
                 else:
                     temp = array_A[x][i] * array_B[i][y]
                     sum = sum + temp
+
+def print_result(A,B,C,scale):
+    calculate(A,B,C,scale)
+    print("Before convert, C is :")
+    print_array(C)
+    convert_to_one(C,scale)
+    print("So your A is :")
+    print_array(A)
+    print("So your B is :")
+    print_array(B)
+    print("your C is: ")
+    print_array(C)
