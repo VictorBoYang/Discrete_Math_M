@@ -19,4 +19,5 @@ B = [
 C = [[-1] * 5 for i in range(scale)]
 
 print_result(A,B,C,scale)
+#print_detail(A,B,C,scale)
 ask_if_detail(A,B,C,scale)

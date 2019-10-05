@@ -12,3 +12,4 @@ print("now input the value for B")
 def_array(B,"B",scale)
 
 print_result(A,B,C,scale)
+ask_if_detail(A,B,C,scale)

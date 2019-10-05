@@ -51,25 +51,29 @@ def print_detail(array_A,array_B,array_C,scale):
     for z in range(scale):
         for j in range(scale):
             sum_str = ""
+            sum_num = 0
             for i in range(scale):
                 if i == scale - 1:
-                    temp = str("(%d)(%d) +" % (array_A[x][i],array_B[i][y]))
-                    sum_str = sum_str + temp
-                    array_C[x][y] = sum
+                    temp_str = str("(%d)(%d) + " % (array_A[x][i],array_B[i][y]))
+                    sum_str = sum_str + temp_str
+                    temp_num = array_A[x][i] * array_B[i][y]
+                    sum_num = sum_num + temp_num
+                    array_C[x][y] = sum_num
                     y = y + 1
-                    print ("c[%d][%d] : " % (x+1,y) + sum_str)
+                    print ("c[%d][%d] : %s = %d \n" % (x+1,y,sum_str,sum_num))
                     if y == scale :
                         x = x + 1
                         y = 0
-
                 else:
-                    temp = str("(%d)(%d) +" % (array_A[x][i],array_B[i][y]))
-                    sum_str = sum_str + temp
+                    temp_str = str("(%d)(%d) +" % (array_A[x][i],array_B[i][y]))
+                    temp_num = array_A[x][i] * array_B[i][y]
+                    sum_num = sum_num + temp_num
+                    sum_str = sum_str + temp_str
 
 def ask_if_detail(A,B,C,scale):
-    ask = input("need detail? 1 for yes, no for 0: ")
+    ask = input("Do you need detail? Input 1 for yes, 0 for no :")
     ask = int(ask)
-    if (ask == 1):
+    if ask == 1:
         print_detail(A,B,C,scale)
     else:
         print("End")
