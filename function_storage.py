@@ -45,6 +45,35 @@ def calculate(array_A,array_B,array_C,scale):
                     temp = array_A[x][i] * array_B[i][y]
                     sum = sum + temp
 
+def print_detail(array_A,array_B,array_C,scale):
+    x = 0
+    y = 0
+    for z in range(scale):
+        for j in range(scale):
+            sum_str = ""
+            for i in range(scale):
+                if i == scale - 1:
+                    temp = str("(%d)(%d) +" % (array_A[x][i],array_B[i][y]))
+                    sum_str = sum_str + temp
+                    array_C[x][y] = sum
+                    y = y + 1
+                    print ("c[%d][%d] : " % (x+1,y) + sum_str)
+                    if y == scale :
+                        x = x + 1
+                        y = 0
+
+                else:
+                    temp = str("(%d)(%d) +" % (array_A[x][i],array_B[i][y]))
+                    sum_str = sum_str + temp
+
+def ask_if_detail(A,B,C,scale):
+    ask = input("need detail? 1 for yes, no for 0: ")
+    ask = int(ask)
+    if (ask == 1):
+        print_detail(A,B,C,scale)
+    else:
+        print("End")
+
 def print_result(A,B,C,scale):
     calculate(A,B,C,scale)
     print("Before convert, C is :")
